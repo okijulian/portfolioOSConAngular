@@ -1,0 +1,14 @@
+p{
+    font-size: 18px;  
+    color: rgb(20, 20, 20);
+    text-align: justify;
+    margin-top: 0;
+    shape-outside: circle();
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.col-lg {
+    background-color: rgb(218, 233, 247);
+    border-radius: 0.5cm;
+}
