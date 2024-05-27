@@ -1,10 +1,16 @@
 .jumbotrom{
     padding: 2rem 1rem;
-    background-color: #eee;
+    background-color: #45484b;
+    
 }
 
 .display-4 {
+    color: #eee6ab;
     font-style: oblique;
     font-family:Georgia, 'Times New Roman', Times, serif
 }
   
+h3{
+    color: #c5bc8e;
+    font-size:2em;
+}

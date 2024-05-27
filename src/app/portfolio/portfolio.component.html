@@ -1,1 +1,11 @@
-<p>portfolio works!</p>
+<div class="container">
+    <div class="row justify-content-center">
+      <div *ngFor="let projecto of projecto"  class="col-lg-4 col-md-6 d-flex justify-content-center mb-4">
+        <app-proyectos-card 
+        [projecto]="projecto"
+        ></app-proyectos-card>
+      </div>    
+      
+    </div>
+  </div>
+  

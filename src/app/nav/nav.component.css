@@ -4,6 +4,14 @@
 }
 
 .navbar-expand-md{
-    background-color: aliceblue;
-    
+    background-color: #45484b;
+      
 }
+.custom-link {
+    color: #c5bc8e; /* Cambia este color al que prefieras */
+}
+
+.custom-link:hover {
+    color: #696758; /* Cambia este color para el efecto hover */
+}
+

@@ -1,6 +1,7 @@
 p{
     font-size: 18px;  
-    color: rgb(20, 20, 20);
+    padding: 2em ;
+    color: #eee;
     text-align: justify;
     margin-top: 0;
     shape-outside: circle();
@@ -8,7 +9,9 @@ p{
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.col-lg {
-    background-color: rgb(218, 233, 247);
+.col-lg-12 {
+    padding-top: 0.5em;
+    background-color: #45484b;
+    align-items: center;
     border-radius: 0.5cm;
 }
