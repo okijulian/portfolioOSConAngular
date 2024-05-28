@@ -11,6 +11,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ResumeComponent } from './resume/resume.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProyectosCardComponent } from './proyectos-card/proyectos-card.component';
+import {ModalModule} from 'ngx-bootstrap/modal'
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { ProyectosCardComponent } from './proyectos-card/proyectos-card.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+  
   ],
   providers: [
     provideClientHydration()
