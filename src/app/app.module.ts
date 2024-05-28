@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-import { Routes, RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -11,8 +10,9 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ResumeComponent } from './resume/resume.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProyectosCardComponent } from './proyectos-card/proyectos-card.component';
-
-import {ModalModule} from 'ngx-bootstrap/modal'
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { ProyectoModalComponent } from './proyecto-modal/proyecto-modal.component';
+import { CarouselComponent, CarouselModule } from 'ngx-bootstrap/carousel';
 
 @NgModule({
   declarations: [
@@ -23,13 +23,16 @@ import {ModalModule} from 'ngx-bootstrap/modal'
     PortfolioComponent,
     ResumeComponent,
     ContactComponent,
-    ProyectosCardComponent
+    ProyectosCardComponent,
+    ProyectoModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-
+    ModalModule.forRoot(),
+    CarouselModule.forRoot(),
+   
   ],
   providers: [
     provideClientHydration()
