@@ -1,4 +1,14 @@
 <div class="container">
+  <div class="mb-2">
+    <div>
+      <button class="btn mb-2 me-2" (click)="isCollapsed=!isCollapsed">Filtrar</button>
+    </div>
+    <div [collapse]="isCollapsed" [isAnimated]="true">
+      <div class="border mb-2 shadow-sm" > </div>
+    </div>
+
+
+  </div>
     <div class="row justify-content-center">
       <div *ngFor="let projecto of projecto"  class="col-lg-4 col-md-6 d-flex justify-content-center mb-4">
         <app-proyectos-card 

@@ -13,6 +13,8 @@ export class PortfolioComponent implements OnInit {
 
   projecto ={} as Projecto[];
 
+  isCollapsed:boolean=true;
+
   constructor(private titleService: Title, private projectsService: ProjectsService){
     this.titleService.setTitle('OSCAR J - PORTFOLIO')
 
