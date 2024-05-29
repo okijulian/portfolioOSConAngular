@@ -23,8 +23,16 @@ export class ProjectsService {
       descripcion: 'Juego de preguntas realizado con Python y Django',
       linkProyecto: 'https://github.com/okijulian/Projectoinfo2021',
       tags: [Tag.PYTHON, Tag.HTML, Tag.CSS],
-      imagen: ["../../assets/project1.0.PNG","../../assets/project1.1-administrador.PNG","../../assets/project1.1-iniciosesion.PNG" ,"../../assets/project1.1-login.PNG",
-      "../../assets/project1.1-pregunta.PNG","../../assets/project1.1-preguntaFAIL.PNG","../../assets/project1.1-preguntaOK.PNG","../../assets/project1.1-ranking.PNG" ,"../../assets/project1.1-register.PNG" 
+      imagen: [
+        "../../assets/project1.0.PNG",
+        "../../assets/project1.1-administrador.PNG",
+        "../../assets/project1.1-iniciosesion.PNG",
+        "../../assets/project1.1-login.PNG",
+        "../../assets/project1.1-pregunta.PNG",
+        "../../assets/project1.1-preguntaFAIL.PNG",
+        "../../assets/project1.1-preguntaOK.PNG",
+        "../../assets/project1.1-ranking.PNG",
+        "../../assets/project1.1-register.PNG",
       ],
     },
     {
@@ -40,16 +48,26 @@ export class ProjectsService {
 
   constructor() {}
 
-  GetProject() {
+  GetProject(): Projecto[] {
     return this.projecto;
   }
 
-  GetProjectById(id: number): Projecto {
-    let projecto = this.projecto.find((projecto) => projecto.id === id);
+  GetProyectosPorFiltro(filtarTags: Tag[]): Projecto[] {
+    let filtrarProyectos: Projecto[] = [];
+    this.projecto.forEach(function (projecto) {
+      let foundAll = true;
 
-    if (projecto === undefined) {
-      throw new TypeError('No se encuentra proyecyto en el id: ' + id);
-    }
-    return projecto;
+      filtarTags.forEach(function (filtarTag) {
+        if (!projecto.tags.includes(filtarTag)) {
+          foundAll = false;
+        }
+      });
+
+      if (foundAll) {
+        filtrarProyectos.push(projecto);
+      }
+    });
+
+    return filtrarProyectos;
   }
 }
