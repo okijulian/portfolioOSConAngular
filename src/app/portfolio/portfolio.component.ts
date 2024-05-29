@@ -7,94 +7,91 @@ import { ProjectsService } from '../_services/projects.service';
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
-  styleUrl: './portfolio.component.css'
+  styleUrl: './portfolio.component.css',
 })
 export class PortfolioComponent implements OnInit {
+  projectos = {} as Projecto[];
 
-  projectos ={} as Projecto[];
+  isCollapsed: boolean = true;
 
-  isCollapsed:boolean=true;
+  typescript: boolean = false;
+  angular: boolean = false;
+  html5: boolean = false;
+  css3: boolean = false;
+  python: boolean = false;
+  csharp: boolean = false;
+  node: boolean = false;
+  asp: boolean = false;
+  java: boolean = false;
+  sql: boolean = false;
+  django: boolean = false;
 
-  typescript: boolean= false;
-  angular: boolean= false;
-  html5: boolean= false;
-  css3: boolean= false;
-  python: boolean= false;
-  csharp: boolean= false;
-  node: boolean= false;
-  asp: boolean= false;
-  java: boolean= false;
-  sql: boolean= false;
-  django: boolean= false;
+  estaFiltrando: boolean = false;
 
-
-  constructor(private titleService: Title, private projectsService: ProjectsService){
-    this.titleService.setTitle('OSCAR J - PORTFOLIO')
-
-}
+  constructor(
+    private titleService: Title,
+    private projectsService: ProjectsService
+  ) {
+    this.titleService.setTitle('OSCAR J - PORTFOLIO');
+  }
   ngOnInit(): void {
-    this.projectos=this.projectsService.GetProject();
-
+    this.projectos = this.projectsService.GetProject();
   }
 
-  Filtro(){
-    let filtarTags: Tag[]=[];
+  Filtro() {
+    let filtarTags: Tag[] = [];
 
-    if(this.typescript){
+    if (this.typescript) {
       filtarTags.push(Tag.TYPESCRIPT);
     }
-    if(this.angular){
+    if (this.angular) {
       filtarTags.push(Tag.ANGULAR);
     }
-    if(this.asp){
+    if (this.asp) {
       filtarTags.push(Tag.ASPNET);
     }
-    if(this.python){
+    if (this.python) {
       filtarTags.push(Tag.PYTHON);
     }
-    if(this.html5){
+    if (this.html5) {
       filtarTags.push(Tag.HTML);
     }
-    if(this.css3){
+    if (this.css3) {
       filtarTags.push(Tag.CSS);
     }
-    if(this.java){
+    if (this.java) {
       filtarTags.push(Tag.JAVA);
     }
-    if(this.node){
+    if (this.node) {
       filtarTags.push(Tag.NODEJS);
     }
-    if(this.sql){
+    if (this.sql) {
       filtarTags.push(Tag.SQL);
     }
 
-    if(this.django){
+    if (this.django) {
       filtarTags.push(Tag.DJANGO);
     }
 
-    if(this.csharp){
+    if (this.csharp) {
       filtarTags.push(Tag.CSHARP);
     }
-
-
-    this.projectos= this.projectsService.GetProyectosPorFiltro(filtarTags);
+    this.projectos = this.projectsService.GetProyectosPorFiltro(filtarTags);
   }
 
-  ResetFiltros(){
-    this.typescript= false;
-    this.angular= false;
-    this.html5= false;
-    this.css3= false;
-    this.python= false;
-    this.csharp= false;
-    this.node= false;
-    this.asp= false;
-    this.java= false;
-    this.sql= false;
-    this.django= false;
+  ResetFiltros() {
+    this.typescript = false;
+    this.angular = false;
+    this.html5 = false;
+    this.css3 = false;
+    this.python = false;
+    this.csharp = false;
+    this.node = false;
+    this.asp = false;
+    this.java = false;
+    this.sql = false;
+    this.django = false;
 
-    this.projectos=this.projectsService.GetProject();
+    this.projectos = this.projectsService.GetProject();
   }
-
 }
-
