@@ -1,3 +1,12 @@
-.accordion-group{
-    background-color:#45484b ;
+accordion-group ::ng-deep .btn-link{
+    color: white;
+    font-weight: bold;
+    
 }
+
+accordion-group ::ng-deep .card-header{
+  background-color: #45484b;
+    
+}
+
+
