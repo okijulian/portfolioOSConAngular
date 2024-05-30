@@ -1,28 +1,37 @@
 .card {
     width: 350px;
-    height: 300px;  /* Establece una altura fija */
+    height: 300px;
     background-color: #45484b;
     color: aliceblue;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;  /* Distribuye el espacio entre los hijos */
-    margin: 10px;  /* Añade margen para separar las tarjetas */
+    justify-content: space-between;
+    margin: 10px;
+    overflow: hidden; /* Evita que los tags desborden la tarjeta */
 }
 
 .card-body {
-    flex-grow: 1;  /* Permite que el cuerpo de la tarjeta crezca para ocupar espacio disponible */
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;  /* Centra el contenido verticalmente */
-    align-items: center;  /* Centra el contenido horizontalmente */
-    padding: 20px;  /* Añade relleno alrededor del contenido */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 .card-footer {
-    height: 100px;  /* Establece una altura fija para el pie de tarjeta */
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
+    overflow-x: auto; /* Agrega scroll horizontal si es necesario */
 }
 
+.tag {
+    
+    margin-right: 10px;
+    padding: 5px 10px; /* Ajusta el espaciado dentro de los tags */
+    font-size: 12px;
+    align-content: center; /* Reduce el tamaño del texto de los tags */
+}

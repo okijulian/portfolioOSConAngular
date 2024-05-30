@@ -1,11 +1,11 @@
 <div class="card shadow text-center">
     <div class="card-body">
-        <h5 class="card-title">{{projecto.nombre}}</h5><br>
-        <p class="card-text">{{projecto.sumario}}</p><br><br>
+        <h5 class="card-title">{{projecto.nombre}}</h5>
+        <p class="card-text">{{projecto.sumario}}</p>
         <button class="btn btn-primary" (click)="OpenProyectoModal()">Saber Mas</button>
     </div>
     <div class="card-footer">
-        <div class="d-flex flex-wrap justify-content-center">
+        <div class="tags-container d-flex flex-wrap justify-content-center">
             <div *ngFor="let tag of projecto.tags">
                 <div class="tag me-2 mb-1" [style.background-color]="tag.color">{{tag}}</div>
             </div>
