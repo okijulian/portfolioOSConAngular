@@ -19,3 +19,9 @@
     width: 80px; 
     height: 80px;  
 }
+
+.custom-bg {
+        background-color: #45484b; /* Cambia este color al que desees */
+        color: aliceblue;
+    }
+
