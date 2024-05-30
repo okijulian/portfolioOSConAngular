@@ -9,9 +9,27 @@ p{
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.col-lg-12 {
+.col-lg-9 {
     padding-top: 0.5em;
     background-color: #45484b;
     align-items: center;
     border-radius: 0.5cm;
+}
+
+.col-lg-2 {
+    padding-top: 0.5em;
+    background-color: #45484b;
+    align-items: center;
+    border-radius: 0.5cm;
+}
+
+.list-group-item{
+   background-color: #45484b;
+   color: aliceblue;
+   font-weight: bold;
+}
+
+h3{
+    color: #eee6ab; 
+   
 }
